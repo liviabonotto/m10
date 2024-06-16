@@ -1,0 +1,102 @@
+.home {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    overflow-x: hidden;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: #f7f8fa;
+      padding: 20px;
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .infoContainer {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          span {
+            font-size: 18px;
+            color: #003358;
+          }
+
+          .date {
+            font-weight: bold;
+          }
+
+          .members {
+            display: flex;
+            align-items: center;
+
+            .title {
+              margin-right: 8px;
+            }
+
+            .logo {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 32px;
+              width: 32px;
+              border-radius: 50%;
+              background-color: #bdbdbd;
+              color: white;
+              font-size: 20px;
+            }
+          }
+        }
+
+        h1 {
+          font-size: 36px;
+          color: #003358;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .filterSection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+
+      .subtitle {
+        font-size: 20px;
+        color: #706f6f;
+        font-weight: normal;
+      }
+
+      .filters {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+
+    .divider {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .body {
+      display: flex;
+      gap: 24px;
+      height: calc(100vh - 200px);
+      padding: 0 20px;
+      overflow-x: auto;
+    }
+  }
+}

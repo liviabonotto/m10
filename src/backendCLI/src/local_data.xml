@@ -1,0 +1,17 @@
+<records>
+  <record>
+    <Id>0012w00000XXXXXXAA2</Id>
+    <Name>Example Account 1</Name>
+    <LastModifiedDate>2024-05-01T12:34:56.000Z</LastModifiedDate>
+  </record>
+  <record>
+    <Id>0012w00000YYYYYYBB3</Id>
+    <Name>Example Account 2</Name>
+    <LastModifiedDate>2024-05-02T12:34:56.000Z</LastModifiedDate>
+  </record>
+  <record>
+    <Id>0012w00000ZZZZZZCC4</Id>
+    <Name>Example Account 3</Name>
+    <LastModifiedDate>2024-05-03T12:34:56.000Z</LastModifiedDate>
+  </record>
+</records>

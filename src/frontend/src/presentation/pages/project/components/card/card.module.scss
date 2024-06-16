@@ -1,0 +1,96 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px 0;
+  width: 100%;
+  cursor: pointer;
+
+  .header {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 0 20px;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 4px;
+      background-color: #bdbdbd;
+      color: white;
+      font-size: 22px;
+    }
+
+    .author {
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+
+    .userRole {
+      font-size: 14px;
+      color: #000000;
+      opacity: 0.7;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 20px;
+
+    .date {
+      font-size: 14px;
+      color: #2cb;
+      font-weight: bold;
+    }
+
+    .text {
+      font-size: 16px;
+      font-weight: bold;
+      opacity: 0.9;
+    }
+
+    .status {
+      margin: 16px 0;
+      font-size: 16px;
+      color: #000000;
+      opacity: 0.9;
+
+      span {
+        font-size: 16px;
+        color: #000000;
+        opacity: 0.7;
+      }
+    }
+
+    .type {
+      width: fit-content;
+      padding: 6px 9px;
+      background-color: #f0f0f0;
+      border-radius: 50px;
+      color: #000;
+      opacity: 0.9;
+      font-size: 13px;
+    }
+  }
+
+  .footer {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+    hr {
+      background-color: #000000;
+      opacity: 0.12;
+      height: 3px;
+    }
+  }
+}

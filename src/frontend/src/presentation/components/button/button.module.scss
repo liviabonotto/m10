@@ -1,0 +1,165 @@
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.right {
+  direction: rtl;
+}
+
+.small {
+  width: fit-content;
+}
+
+.medium {
+  width: 60%;
+}
+
+.large {
+  width: 100%;
+}
+
+.kanban {
+  margin-top: 12px;
+  align-self: flex-end;
+  justify-self: flex-end;
+  padding: 6px 24px;
+  margin-right: 12px;
+  background-color: #00335804;
+  border: dashed #003358 1px;
+  color: #003358;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.primary {
+  padding: 6px 12px;
+  font-size: 13px;
+  height: 36px;
+  background-color: #0ba0cc;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  span {
+    margin-right: 4px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.secondary {
+  padding: 6px 12px;
+  font-size: 13px;
+  height: 36px;
+  background-color: #ffff;
+  color: #23a3ff;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.cancel {
+  padding: 6px 12px;
+  font-size: 13px;
+  height: 36px;
+  background-color: #ffff;
+  color: #00000080;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.logout {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #ffff;
+  color: #0ba0cc;
+  border: 1px solid #0ba0cc;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e4eef6;
+  }
+}
+
+.kanban,
+.primary,
+.cancel,
+.logout {
+  &:disabled {
+    color: red;
+    opacity: 0.3;
+  }
+}
+
+.dialogButtonClose {
+  padding: 10px;
+  width: 99px;
+  height: 36px;
+  background-color: #ffff;
+  color: gray;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #b8c4cd;
+  }
+}
+
+.dialogButtonAgree {
+  padding: 10px;
+  width: 169px;
+  height: 54px;
+  background-color: #2cb196;
+  color: #000000;
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #2d9984;
+    color: #000000;
+  }
+}
+
+.dialogButtonCancel {
+  padding: 10px;
+  width: 169px;
+  height: 54px;
+  background-color: #706f6f;
+  color: #000000;
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #5a5a5a;
+    color: #000000;
+  }
+}

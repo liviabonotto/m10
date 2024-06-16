@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package>
+  <types>
+    <members>main/default/objects/Knowledge__kav/Knowledge__kav.object-meta.xml</members>
+    <name>xml</name>
+  </types>
+  <types>
+    <members>main/default/objects/Knowledge__kav/compactLayouts/Knowledge_Easy_Compact_Layout.compactLayout-meta.xml</members>
+    <name>xml</name>
+  </types>
+  <types>
+    <members>main/default/objects/Knowledge__kav/fields/ArticleBody__c.field-meta.xml</members>
+    <name>xml</name>
+  </types>
+  <types>
+    <members>main/default/objects/Knowledge__kav/listViews/All_Articles.listView-meta.xml</members>
+    <name>xml</name>
+  </types>
+  <types>
+    <members>main/default/objects/Knowledge__kav/listViews/archived_articles.listView-meta.xml</members>
+    <name>xml</name>
+  </types>
+  <types>
+    <members>main/default/objects/Knowledge__kav/listViews/draft_articles.listView-meta.xml</members>
+    <name>xml</name>
+  </types>
+  <types>
+    <members>main/default/objects/Knowledge__kav/listViews/published_articles.listView-meta.xml</members>
+    <name>xml</name>
+  </types>
+</Package>

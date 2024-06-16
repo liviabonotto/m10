@@ -1,0 +1,17 @@
+#!/bin/sh
+# This hook script uses commitlint to validate commit messages.
+
+# Define the path to your commitlint configuration
+CONFIG_PATH="$(pwd)/src/commitlint.config.js"
+
+# Run commitlint with the explicit config path
+echo "Checking commit message format..."
+npx commitlint --config "${CONFIG_PATH}" --edit "$1"
+
+# Check the result of commitlint
+if [ $? -ne 0 ]; then
+    echo "Commit message validation failed. Please follow the format 'feat: <description>', 'fix: <description>', or 'docs: <description>'."
+    exit 1
+else
+    echo "Commit message format is correct."
+fi

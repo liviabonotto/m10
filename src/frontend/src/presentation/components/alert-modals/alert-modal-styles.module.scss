@@ -1,0 +1,25 @@
+.box {
+    position: relative;
+
+    .button {
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .lineContainer {
+        position: relative;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 28px;
+
+        .line {
+            left: -30px;
+            position: absolute;
+            width: calc(100% + 60px);
+        }
+    }
+}

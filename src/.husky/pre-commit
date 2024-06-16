@@ -1,0 +1,44 @@
+# Vê primeiro se o sonarqube está rodando
+# if curl -s http://localhost:9000/api/system/status | grep -q '"status":"UP"'; then
+#     echo "SonarQube está rodando."
+# else
+#     echo "SonarQube não está rodando."
+# fi
+
+# Esperar alguns segundos
+# sleep 5
+
+# rodar sonar-scanner
+# sonar-scanner
+# echo "sonar scanner está fazendo a análise, veja os resultados no SonarQube"
+
+# Navegar até o diretório frontend e executar npm start
+cd src/frontend
+echo "Rodando script no frontend"
+npm run dev &  # Iniciar npm start em segundo plano
+
+# Esperar alguns segundos
+sleep 5
+
+# Verificar se o processo npm start ainda está em execução
+if ps -p $! > /dev/null; then
+    echo "Projeto iniciado com sucesso, continuando com o commit."
+    cd ../..  # Voltar para o diretório raiz
+else
+    echo "O projeto não pôde ser iniciado, travando o commit."
+    cd ../..  # Voltar para o diretório raiz
+    exit 1
+fi
+
+# Navegar até o diretório backendCLI e executar npm test
+cd src/backendCLI
+echo "Rodando testes no backendCLI"
+npm test || true  # Run tests but do not block the commit if they fail
+
+# Esperar alguns segundos
+sleep 5
+
+# Continuar com o commit independentemente do resultado dos testes
+echo "Os testes foram executados. Continuando com o commit."
+cd ../..  # Voltar para o diretório raiz
+exit 0

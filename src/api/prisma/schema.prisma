@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Organization {
+  id                   String                 @id @default(uuid())
+  name                 String
+  logo                 String
+  Organization_project Organization_project[]
+}
+
+model Project {
+  id                   String                 @id @default(uuid())
+  name                 String
+  Organization_project Organization_project[]
+  Project_environment  Project_environment[]
+  User_permission      User_permission[]
+}
+
+model Environment {
+  id                  String                @id @default(uuid())
+  name                String
+  Project_environment Project_environment[]
+}
+
+model User {
+  id              String            @id @default(uuid())
+  name            String
+  email           String
+  User_permission User_permission[]
+}
+
+model Role {
+  id              String            @id @default(uuid())
+  name            String
+  User_permission User_permission[]
+}
+
+model Organization_project {
+  organization_id String
+  project_id      String
+
+  organization Organization @relation(fields: [organization_id], references: [id], onDelete: Cascade)
+  project      Project      @relation(fields: [project_id], references: [id], onDelete: Cascade)
+
+  @@id([organization_id, project_id])
+}
+
+model Project_environment {
+  environment_id String
+  project_id     String
+
+  environment Environment @relation(fields: [environment_id], references: [id], onDelete: Cascade)
+  project     Project     @relation(fields: [project_id], references: [id], onDelete: Cascade)
+
+  @@id([environment_id, project_id])
+}
+
+model User_permission {
+  user_id    String
+  role_id    String
+  project_id String
+
+  user    User    @relation(fields: [user_id], references: [id])
+  role    Role    @relation(fields: [role_id], references: [id])
+  project Project @relation(fields: [project_id], references: [id], onDelete: Cascade)
+
+  @@id([user_id, role_id, project_id])
+}
